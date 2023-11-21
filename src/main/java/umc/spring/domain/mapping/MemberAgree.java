@@ -1,6 +1,5 @@
-package umc.spring.domain;
+package umc.spring.domain.mapping;
 
-import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -13,6 +12,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import umc.spring.domain.Member;
+import umc.spring.domain.Terms;
 import umc.spring.domain.common.BaseEntity;
 
 @Entity
@@ -20,20 +21,17 @@ import umc.spring.domain.common.BaseEntity;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Mission extends BaseEntity{
+public class MemberAgree extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Integer reward;
-
-    private LocalDate deadline;
-
-    private String missionSpec;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "terms_id")
+    private Terms terms;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "store_id")
-    private Store store;
-
+    @JoinColumn(name = "member_id")
+    private Member member;
 }

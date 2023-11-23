@@ -39,6 +39,6 @@ public class Review extends BaseEntity {
     @JoinColumn(name = "member_id")
     private Member member;
 
-    // 안녕하세여
+    // 안녕하세여1
 }
 

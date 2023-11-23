@@ -14,7 +14,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import umc.spring.domain.common.BaseEntity;
-import umc.spring.domain.mapping.MemberMission;
 
 @Entity
 @Getter
@@ -40,5 +39,6 @@ public class Review extends BaseEntity {
     @JoinColumn(name = "member_id")
     private Member member;
 
-
+    // 안녕하세여
 }
+

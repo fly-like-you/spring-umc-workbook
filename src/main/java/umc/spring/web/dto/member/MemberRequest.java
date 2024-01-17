@@ -8,9 +8,12 @@ public class MemberRequest {
 
     @Getter
     public static class JoinDTO{
-        private String name;
-        private String address;
-        private Integer gender;
-        private List<Long> preferList;
+        String name;
+        Integer birthYear;
+        Integer birthMonth;
+        Integer birthDay;
+        String address;
+        String specAddress;
+        List<Long> preferList;
     }
 }

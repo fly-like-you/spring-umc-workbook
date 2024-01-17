@@ -17,6 +17,8 @@ public class MemberConverter {
     public static Member toMember(MemberRequest.JoinDTO request ) {
         return Member.builder()
                 .address(request.getAddress())
+                .specAddress(request.getSpecAddress())
+                .name(request.getName())
                 .memberPreferList(new ArrayList<>())
                 .build();
     }

@@ -5,7 +5,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import lombok.Getter;
-import umc.spring.domain.mapping.MemberPrefer;
 import umc.spring.validation.annotation.ExistCategories;
 
 public class MemberRequest {

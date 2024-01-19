@@ -81,4 +81,12 @@ public class Member extends BaseEntity {
 //
 //    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
 //    private List<MemberMission> memberMissionList = new ArrayList<>();
+
+
+
+    public Member(String name, String address, String specAddress) {
+        this.name = name;
+        this.address = address;
+        this.specAddress = specAddress;
+    }
 }

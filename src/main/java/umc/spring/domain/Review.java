@@ -13,6 +13,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import umc.spring.domain.common.BaseEntity;
 
 @Entity
@@ -20,6 +21,7 @@ import umc.spring.domain.common.BaseEntity;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
+@ToString
 public class Review extends BaseEntity {
 
     @Id
@@ -42,5 +44,14 @@ public class Review extends BaseEntity {
     private Member member;
 
     // 안녕하세여1
+
+
+    public Review(String title, Float score, String body, Store store, Member member) {
+        this.title = title;
+        this.score = score;
+        this.body = body;
+        this.store = store;
+        this.member = member;
+    }
 }
 

@@ -37,4 +37,11 @@ public class Store extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "region_id")
     private Region region;
+
+    public Store(String name, String address, Float score, Region region) {
+        this.name = name;
+        this.address = address;
+        this.score = score;
+        this.region = region;
+    }
 }
